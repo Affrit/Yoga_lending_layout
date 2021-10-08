@@ -1,0 +1,22 @@
+@mixin circle($size) {
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+}
+
+@mixin btn($bg_color, $hover_color, $color, $b_radius) {
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s;
+    padding: 15px 60px;
+    background-color: $bg_color;
+    color: $color;
+    border-radius: $b_radius;
+
+    &:hover {
+        background-color: $hover_color;
+        box-shadow: 5px 5px 10px $bg_color;
+    }
+}

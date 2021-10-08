@@ -1,0 +1,107 @@
+.form-section {
+    background: 50% 50% no-repeat;
+    background-size: cover;
+    background-color: $main_color;
+    position: relative;
+    z-index: 0;
+    padding: 50px 0;
+
+    @media (min-width: 576px) {
+        padding-top: 100px;
+        padding-bottom: 105px;
+    }
+    
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(83, 99, 219, 0.7);
+        z-index: 1;
+    }
+}
+
+.two-columns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+
+    @media (min-width: 576px) {
+        flex-direction: row;
+    }
+
+    &__col {
+        width: 100%;
+        padding: 0 5px;
+
+        @media (min-width: 576px) {
+            width: 50%;
+        }
+    }
+}
+
+.form-wrap {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+
+    @media (min-width: 576px) {
+        padding-right: 25px;
+        justify-content: flex-end;
+        padding-bottom: 0;
+    }
+
+    @media (min-width: 768px) {
+        padding-right: 42px;
+    }
+}
+
+.form-section-titles {
+    display: flex;
+    flex-direction: column;
+    color: $white;
+    text-align: center;
+
+    @media (min-width: 576px) {
+        padding-left: 25px;
+        text-align: start;;
+    }
+
+    @media (min-width: 768px) {
+        padding-left: 45px;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-weight: bold;
+        line-height: 1.5;
+        margin-bottom: 27px;
+
+        @media (min-width: 576px) {
+            font-size: 34px;
+        }
+
+        @media (min-width: 992px) {
+            font-size: 48px;
+        }
+    }
+
+    &__subtitle {
+        font-family: 'FREESCPT';
+        font-size: 20px;
+
+        @media (min-width: 576px) {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        @media (min-width: 992px) {
+            font-size: 40px;
+        }
+    }
+}

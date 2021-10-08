@@ -1,0 +1,113 @@
+.about-section {
+    padding: 0 0 50px;
+    position: relative;
+    z-index: 1;
+
+    @media (min-width: 576px) {
+        padding: 50px 0 100px;
+    }
+
+    @media (min-width: 992px) {
+        padding: 98px 0 175px;
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+
+        @media (min-width: 576px) {
+            flex-direction: row;
+        }
+    }
+
+    &__content {
+        width: 90%;
+
+        @media (min-width: 576px) {
+            width: 40%;
+        }
+    }
+
+    &__swiper {
+        border-radius: $base_radius;
+        width: 90%;
+        position: relative;
+        box-shadow: 0 0 10px $shadow;
+
+        @media (min-width: 576px) {
+            width: 48.7%;
+        }
+    }
+
+    &__title {
+        font-size: 30px;
+        font-weight: bold;
+        color: $main_color;
+        text-transform: uppercase;
+
+        @media (min-width: 768px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__text {
+        line-height: 1.57;
+        margin-bottom: 35px;
+
+        @media (min-width: 768px) {
+            margin-bottom: 81px;
+        }
+    }
+}
+
+.visual {
+    position: relative;
+    padding-top: 52.6%;
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        object-fit: cover;
+    }
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+
+    &:after {
+        @include circle(50px);
+        position: absolute;
+        font-family: "icomoon";
+        content: "\e903";
+        color: $main_color;
+        background-color: $white;
+        text-align: center;
+        left: 13px;
+        box-shadow: 5px 5px 5px $shadow;
+        transition: all 0.3s;
+    }
+
+    &:hover {
+        &:after {
+            text-shadow: 1px 1px $text_color;
+            transform: scale(1.2);
+        }
+    }
+}
+
+.swiper-button-prev:after {
+    content: "\e904";
+    left: calc(100% - 58px);
+    text-align: left;
+}
+
+.swiper-slide {
+    border-radius: $base_radius;
+    overflow: hidden;
+}

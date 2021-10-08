@@ -1,0 +1,59 @@
+.social {
+    font-family: "icomoon";
+    position: absolute;
+    bottom: 50px;
+
+    @media (min-width: 992px) {
+        position: static;
+    }
+
+    &__pinterest,
+    &__twitter,
+    &__facebook,
+    &__google,
+    &__instagram {
+        position: relative;
+        padding: 0 18px;
+
+        &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            content: "\ead1";
+            color: $white;
+            font-size: 26px;
+            transition: all 0.3s;
+        }
+
+        &:hover {
+            &:before {
+                text-shadow: 2px 2px $text_color;
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    &__twitter {
+        &:before {
+            content: "\e901";
+        }
+    }
+
+    &__facebook {
+        &:before {
+            content: "\e902";
+        }
+    }
+
+    &__google {
+        &:before {
+            content: "\ea8d";
+        }
+    }
+
+    &__instagram {
+        &:before {
+            content: "\e905";
+        }
+    }
+}

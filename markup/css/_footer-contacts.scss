@@ -1,0 +1,75 @@
+.contacts {
+    font-family: "icomoon";
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+    @media (min-width: 576px) {
+        flex-direction: row;
+    }
+
+    &__col {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__location,
+    &__tel,
+    &__mail,
+    &__website {
+        position: relative;
+        padding: 14px 80px 5px 35px;
+        margin-right: -4px;
+        transition: all 0.3s;
+
+        @media (min-width: 992px) {
+            padding-right: 0;
+        }
+
+        &:before {
+            position: absolute;
+            top: calc(50% - 20px);
+            left: 0;
+            content: "\e948";
+            color: $white;
+            font-size: 26px;
+            transition: all 0.3s;
+        }
+
+        &:hover {
+            transform: scale(1.05);
+            text-shadow: 1px 1px $text_color;
+            &:before {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    &__tel {
+        display: flex;
+        flex-direction: column;
+
+        &:before {
+            content: "\e942";
+        }
+    }
+
+    &__mail {
+        flex-grow: 1;
+        &:before {
+            content: "\e945";
+        }
+    }
+
+    &__website {
+        flex-grow: 1;
+        &:before {
+            content: "\eaa7";
+        }
+    }
+}
+
+.ref-text {
+    font-family: $main_font;
+}

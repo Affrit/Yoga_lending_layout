@@ -1,0 +1,60 @@
+.form {
+    background: $white;
+    border-radius: $base_radius * 2;
+    width: 300px;
+    padding: 35px 30px;
+    font-size: 14px;
+    color: $text_color_lite;
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item {
+        padding: 10px 0;
+    }
+
+    &__input {
+        padding: 15px 10px;
+        border-radius: $base_radius;
+        width: 100%;
+        border: none;
+        background: $form_field;
+        cursor: pointer;
+        outline: none;
+        transition: box-shadow 0.3s;
+
+        &:hover {
+            box-shadow: 3px 3px 5px $main_color;
+        }
+
+        &:focus {
+            box-shadow: 3px 3px 3px 4px $main_color;
+        }
+    }
+
+    &__title {
+        margin: 2px 5px 18px 6px;
+        color: $main_color;
+        font-size: 26px;
+        font-weight: 600;
+    }
+
+    &__btn {
+        @include btn($btn_bg, $main_color, $white, $base_radius);
+        font-size: 16px;
+        font-weight: bold;
+        margin-top: 2px;
+    }
+}
+
+.btn-wrap {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 20px;
+}
+
+option {
+    background: $main_color;
+}

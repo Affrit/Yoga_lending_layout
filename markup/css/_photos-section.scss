@@ -1,0 +1,57 @@
+.photos-section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0;
+
+    @media (min-width: 768px) {
+        padding: 77px 0;
+    }
+
+    &__item {
+        width: 50%;
+        position: relative;
+
+        @media (min-width: 576px) {
+            width: 25%;
+        }
+    }
+
+    &__ref {
+        font-family: 'icomoon';
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            transition: all 0.3s;
+        }
+
+        &:after {
+            content: "\e986";
+            position: absolute;
+            top: calc(50% - 20px);
+            left: calc(50% - 20px);
+            @include circle(40px);
+            background-color: $white;
+            color: $main_color;
+            text-align: center;
+            line-height: 40px;
+            opacity: 0;
+            transition: all 0.3s;
+        }
+
+        &:hover {
+
+            &:before {
+                background: rgba(83, 99, 219, 0.7);
+            }
+
+            &:after {
+                opacity: 1;
+            }
+        }
+    }
+}
